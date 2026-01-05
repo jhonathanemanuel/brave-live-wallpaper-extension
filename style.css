@@ -1,0 +1,127 @@
+/* Import da fonte - movido para o HTML para evitar bloqueio de renderização */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* O corpo deve ser transparente para não cobrir o vídeo */
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: transparent; 
+}
+
+/* O vídeo é a base de tudo */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -100; /* O nível mais baixo possível */
+    background-color: #000; /* Fundo preto apenas enquanto o vídeo não carrega */
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+    background: transparent;
+}
+
+/* Container do Formulário */
+.search-form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-wrapper {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 100px;
+    padding: 5px 20px; /* Padding ajustado */
+    width: 500px;
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+/* Customização do Placeholder */
+.search-wrapper input::placeholder {
+    color: rgba(255, 255, 255, 0.4); /* Cor suave */
+    font-weight: 300;
+}
+
+.search-wrapper input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 17px;
+    padding: 12px 5px;
+}
+
+/* Botão de busca alinhado à direita */
+#search-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6); /* Cor do ícone */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+#search-btn:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+#search-btn svg {
+    display: block;
+}
+
+#settings-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+}
+
+/* Painel lateral */
+#settings-panel {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    color: white;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.hidden { transform: translateX(100%); }

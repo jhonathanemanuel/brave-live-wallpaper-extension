@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Meu Wallpaper Animado",
+  "version": "1.0",
+  "description": "Substitui a nova guia por um wallpaper animado.",
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "permissions": ["storage"],
+  "action": {}
+}
