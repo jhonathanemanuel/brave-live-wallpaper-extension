@@ -51,12 +51,20 @@ body, html {
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 100px;
-    padding: 5px 20px; /* Padding ajustado */
+    padding: 5px 25px;
     width: 500px;
     display: flex;
-    transition: all 0.3s ease;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    
+    opacity: 0.2; 
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Quando passar o mouse na área central OU quando estiver digitando */
+.search-wrapper:hover {
+    opacity: 1;
+}
 /* Customização do Placeholder */
 .search-wrapper input::placeholder {
     color: rgba(255, 255, 255, 0.4); /* Cor suave */
