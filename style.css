@@ -46,7 +46,7 @@ body, html {
 }
 
 .search-wrapper {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.078);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.15);
@@ -58,20 +58,15 @@ body, html {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     
     opacity: 0.2; 
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Quando passar o mouse na área central OU quando estiver digitando */
 .search-wrapper:hover {
     opacity: 1;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> d10a373912e59db5607a9be8786aaa02046398c2
-/* Customização do Placeholder */
 .search-wrapper input::placeholder {
-    color: rgba(255, 255, 255, 0.4); /* Cor suave */
+    color: rgba(255, 255, 255, 0.5); /* Cor suave */
     font-weight: 300;
 }
 
@@ -80,7 +75,7 @@ body, html {
     background: transparent;
     border: none;
     outline: none;
-    color: white;
+    color: rgba(255, 255, 255, 1);
     font-size: 17px;
     padding: 12px 5px;
 }
@@ -89,13 +84,12 @@ body, html {
 #search-btn {
     background: transparent;
     border: none;
-    color: rgba(255, 255, 255, 0.6); /* Cor do ícone */
+    color: rgba(255, 255, 255, 1); /* Cor do ícone */
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
-    transition: 0.3s;
 }
 
 #search-btn:hover {
@@ -137,7 +131,6 @@ body, html {
 }
 
 .hidden { transform: translateX(100%); }
-<<<<<<< HEAD
 
 /* Container que agrupa busca e botões */
 .main-container {
@@ -147,16 +140,12 @@ body, html {
     gap: 25px; /* Espaço entre a barra e os botões */
     
     /* Faz TUDO sumir e aparecer junto */
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 1;
     pointer-events: none;
 }
 
 .content:hover .main-container,
 .main-container:focus-within {
-    opacity: 1;
-    transform: translateY(0);
     pointer-events: auto;
 }
 
@@ -179,14 +168,14 @@ body, html {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    opacity: 0.2; 
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0.2;
 }
 
 .shortcut-card:hover {
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    opacity: 1; 
+    opacity: 1;
+    transform: scale(1.2);
 }
 
 .shortcut-card img {
@@ -199,5 +188,3 @@ body, html {
 .shortcut-card svg {
     opacity: 0.8;
 }
-=======
->>>>>>> d10a373912e59db5607a9be8786aaa02046398c2
